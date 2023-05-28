@@ -19,6 +19,7 @@ php artisan make:request RegistrationRequest
 Create a route /home that redirects to /dashboard using a 302 redirect.
 
 // Add the following route in routes/web.php
+
 Route::get('/home', function () {
     return redirect('/dashboard');
 });
@@ -35,6 +36,7 @@ php artisan make:middleware LogRequestMiddleware
 ## Task 4: Route Middleware
 
 // Add the following route group in routes/web.php
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', 'ProfileController@index');
     Route::get('/settings', 'SettingsController@index');
